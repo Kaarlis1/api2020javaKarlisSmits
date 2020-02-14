@@ -1,24 +1,22 @@
 package domain;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
-public class Space {
-    @JsonProperty("id")
+@JsonIgnoreProperties(ignoreUnknown = true)
+public class ClickUpFolder {
     private String id;
-
-    @JsonProperty("name")
     private String name;
 
     public String getId() {
         return id;
     }
 
-    public void setId(String id) {
-        this.id = id;
-    }
-
     public String getName() {
         return name;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public void setName(String name) {
